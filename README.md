@@ -1,6 +1,6 @@
-# Borof-Pani :snowflake:
+# Chase :snowflake:
 
-Borof-pani is a 2D game where you tap a moving ball to freeze its movement and freeze all the balls to finish the level. However, one freezed ball will continue to move if it is collided by another ball.
+Chase is a 2D game where you tap a moving ball to freeze its movement and freeze all the balls to finish the level. However, one freezed ball will continue to move if it is collided by another ball.
 
 ## How to open this project:
 
