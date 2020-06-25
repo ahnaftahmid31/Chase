@@ -6,7 +6,7 @@ public class Ball : MonoBehaviour {
 	private Animator animator;
 	private Vector2 randomVelocity;
 	const float speed = 5.0f;
-
+	// this is UI branch
 	// Start is called before the first frame update
 	void Start () {
 		animator = GetComponent<Animator> ();
