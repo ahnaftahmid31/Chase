@@ -16,7 +16,7 @@ public class Ball : MonoBehaviour {
 		rig.velocity = randomVelocity.normalized * speed;
 	}
 
-	void FixedUpdate () {
+	void LateUpdate () {
 		if (!isFrozen) rig.velocity = rig.velocity.normalized * speed;
 	}
 	public void Freeze () {
