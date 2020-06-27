@@ -5,8 +5,7 @@ public class Ball : MonoBehaviour {
 	private bool isFrozen;
 	private Animator animator;
 	private Vector2 randomVelocity;
-	const float speed = 5.0f;
-	// this is UI branch
+	public float speed = 5.0f;
 	// Start is called before the first frame update
 	void Start () {
 		animator = GetComponent<Animator> ();
