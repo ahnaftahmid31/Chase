@@ -6,8 +6,10 @@ public class Ball : MonoBehaviour {
 	private Animator animator;
 	private Vector2 randomVelocity;
 	public float speed = 5.0f;
+	private ScoreManager scoreManager;
 	// Start is called before the first frame update
 	void Start () {
+		scoreManager = GameObject.Find ("ScoreText")?.GetComponent<ScoreManager> ();
 		animator = GetComponent<Animator> ();
 		rig = GetComponent<Rigidbody2D> ();
 		isFrozen = false;
@@ -22,6 +24,7 @@ public class Ball : MonoBehaviour {
 		rig.velocity = Vector2.zero;
 		isFrozen = true;
 		animator.SetBool ("isFrozen", true);
+		scoreManager.ballStopped ();
 	}
 	public void OnMouseDown () {
 		if (!isFrozen) Freeze ();
@@ -30,6 +33,7 @@ public class Ball : MonoBehaviour {
 		if (collision.collider.CompareTag ("ball") && isFrozen) {
 			isFrozen = false;
 			animator.SetBool ("isFrozen", false);
+			scoreManager.ballFreed ();
 		}
 	}
 }
